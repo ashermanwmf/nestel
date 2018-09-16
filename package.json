@@ -1,0 +1,16 @@
+{
+  "name": "nestel",
+  "version": "1.0.0",
+  "description": "Middleware to create nested objects from params.",
+  "main": "./dist/nestel.js",
+  "scripts": {
+    "example": "nodemon ./example/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Sherman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  }
+}
