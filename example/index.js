@@ -1,17 +1,11 @@
 const express = require('express'),
   app = express(),
-  Nestel = require('../dist/nestel.js');
+  Nestel = require('../lib/nestel.js');
 
-app.use(new Nestel({ routes: ['/test'], deliminator: '.' }));
+app.use(new Nestel({ deliminator: '.' }));
 
-app.get('/', (req, res, next) => {
-  console.log(req.query)
-  res.send('good');
-});
-
-app.get('/test', (req, res, next) => {
-  console.log(req.query)
-  res.send('good');
+app.get('/', (req, res) => {
+  res.send(req.query);
 });
 
 app.listen(3000, () => console.log('woot'));
